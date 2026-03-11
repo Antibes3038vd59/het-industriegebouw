@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+/* ALGEMENE SETTINGS */
+
+h1, h2, a, label, footer, button {
+	font-family: "Fjalla One", sans-serif, Arial, Helvetica, sans-serif;
+	color: black;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+body.huren-page {
+	width: 100%;
+	margin: auto;
+	background-color: #ca2e2e  !important;
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+.dotHuren {
+	position: absolute;
+	background-color: #cfc261;
+	border-radius: 50%;
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+	z-index: 4;
+}
+/* EINDE ALGEMENE SETTINGS */
+
+/* header */
+header {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	margin-right: 380px;
+}
+
+.logoHuren {
+    font-size: 80px;
+    color: #ca2e2e;
+    -webkit-text-stroke: 1.5px #f0e9b8;
+    padding-bottom: 7px;
+}
+
+header span {
+	font-size: 100px;
+}
+
+/* main */
+.wrapperHurenKlein {
+    max-width: 1120px; /* zelfde als h1 */
+    margin: 0 auto;
+}
+
+.tekstHuren, body.huren-page .tekstHuren {
+    color: #f0e9b8;
+    padding-left: 45px;
+    font-size: 19.2px;
+    width: 800px;
+    line-height: 1.5;
+}
+
+/* main */
+/* knoppenmenu huren */
+.containerHuren1 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 75px;
+    width: 800px;
+	padding: 50px 0px 0px 45px;
+    font-family: "Fjalla One", sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.circleHuren1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #f0e9b8;
+    background-color: #ca2e2e;;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-sizing: border-box;
+    position: relative;
+    border: 8px solid #cfc261;
+}
+
+.circleHuren1:hover, .circleHuren1.selected {
+    background-color: #ca2e2e;
+    color: #f0e9b8;
+    border-color: #f0e9b8;
+}
+
+/* uitkomst beschikbaarheid */
+.circleHuren2 {
+    width: 150px;
+    height: 100px;
+    border-radius: 15%;
+    display: flex;
+    flex-direction: column; /* nieuw: tekst onder elkaar */
+    justify-content: center;
+    align-items: center;
+    font-family: "Fjalla One", sans-serif, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-align: center; /* nieuw: tekst centreren */
+    font-size: 14px;
+    font-weight: bold;
+    color: #f0e9b8;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-sizing: border-box;
+    position: relative;
+    border: 8px solid #f0e9b8;
+    visibility: hidden; /* Initieel onzichtbaar */
+    line-height: 1.5; /* nieuw: iets meer ruimte tussen regels */
+}
+
+.footerHuren p {
+    width: 400px;
+	padding: 130px 90px 0px 95px;
+}
+
+
+
+
+								/* Tablet layout: schermbreedte tot 1024px */
+@media (max-width: 1024px) {
+
+    /* MAIN */
+	.wrapperHurenKlein {
+		margin-left: 30px;
+	}
+
+    .tekstHuren, body.huren-page .tekstHuren {
+        padding-left: 15px;
+    }
+
+    .containerHuren1 {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 25px;
+        width: 450px;
+        padding: 50px 0px 0px 10px;
+    }
+
+    .circleHuren1 {
+        width: 67px;
+        height: 67px;
+    }
+
+    /* uitkomst beschikbaarheid */
+    .circleHuren2 {
+     width: 120px;
+     height: 80px;
+     border-radius: 20%;
+    }
+
+    .footerHuren p {
+        width: 400px;
+        padding: 250px 0px 0px 45px;
+    }
+}

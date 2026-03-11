@@ -1,0 +1,28 @@
+/* index.css */
+@charset "UTF-8";
+
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* BASIS TYPOGRAFIE */
+body {
+  font-family: "Fjalla One", sans-serif, Arial, Helvetica, sans-serif;
+  background-color: #f0e9b8;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

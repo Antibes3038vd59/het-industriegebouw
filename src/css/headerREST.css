@@ -1,0 +1,171 @@
+@charset "UTF-8";
+
+/* ALGEMENE SETTINGS */
+
+h1, h2, a, footer {
+	font-family: "Fjalla One", sans-serif, Arial, Helvetica, sans-serif;
+	color: black;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+body.home-page {
+	width: 100%;
+	margin: auto;
+	background-color: #f0e9b8 !important;
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+.dotHome {
+	position: absolute;
+	background-color: #972323;
+	border-radius: 50%;
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+}
+
+/* EINDE ALGEMENE SETTINGS */
+
+/* header */
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 380px;
+}
+
+/* Logo stijlen voor REST pagina's */
+header .logoRest {
+	font-family: "Fjalla One", sans-serif, Arial, Helvetica;
+	font-size: 80px;
+	color: #ca2e2e;
+	-webkit-text-stroke: 1.5px #f0e9b8;
+	paint-order: stroke fill;
+	padding-bottom: 7px;
+	text-decoration: none;
+}
+
+header .logoRest span {
+	font-size: 100px;
+	-webkit-text-stroke: 1.5px #f0e9b8;
+	paint-order: stroke fill;
+}
+
+/* Logo stijlen voor About pagina */
+header.about .logoAbout {
+	font-family: "Fjalla One", sans-serif, Arial, Helvetica;
+	font-size: 80px;
+	color: #ca2e2e;
+	-webkit-text-stroke: 1.5px #f0e9b8;
+	paint-order: stroke fill;
+	padding-bottom: 7px;
+	text-decoration: none;
+}
+
+header.about .logoAbout span {
+	font-size: 100px;
+	-webkit-text-stroke: 1.5px #f0e9b8;
+	paint-order: stroke fill;
+}
+
+/* navigatie */
+.containerRest {
+    position: fixed;
+    top: 0px;
+    left: 53.7%;
+    transform: translateX(calc(515px - 100%)); /* 1030 / 2 = 515 */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: 134px;
+    background-color: #f0e9b8;
+    font-family: "Fjalla One", sans-serif, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: width 0s, top 0s;
+    z-index: 1;
+}
+
+.containerRest.expanded {
+    width: 260px;
+}
+
+/* Cirkels */
+.circleRest {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #f0e9b8;
+    border: 8px solid #cfc261;
+    color: #ca2e2e;
+    text-transform: uppercase;
+    transition: width 0s, height 0s;
+    text-decoration: none;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Stijlen voor de actieve pagina's */
+body.about .circleRest.about.active,
+body.huren .circleRest.huren.active,
+body.contact .circleRest.contact.active {
+    background-color: #ca2e2e;
+    color: #f0e9b8;
+    border: 8px solid #ca2e2e;
+}
+
+/* Hover effecten */
+.circleRest:hover {
+    background-color: #ca2e2e;
+    color: #f0e9b8;
+    border: 8px solid #ca2e2e;
+}
+
+/* Stijlen voor de actieve pagina's */
+.circleRest.about.active,
+.circleRest.huren.active,
+.circleRest.contact.active {
+    background-color: #ca2e2e;
+    color: #f0e9b8;
+    border: 8px solid #ca2e2e;
+}
+
+
+								/* Tablet layout: schermbreedte tot 1024px */
+@media (max-width: 1024px) {
+	/* Logo */
+	header .logoRest {
+		font-size: 60px;
+	  }
+	  
+	  header .logoRest span {
+		font-size: 80px;
+	  }
+
+/* NAVIGATIE */
+.containerRest {
+	position: static;
+	transform: none;
+	margin: 10px 0px 30px 0px;
+	grid-template-columns: repeat(2, 1fr);
+	width: 130px;
+}
+
+.circleRest {
+	width: 60px;
+	height: 60px;
+	font-size: 12px;
+}
+}
+
+

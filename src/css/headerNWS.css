@@ -1,0 +1,128 @@
+/* ALGEMENE SETTINGS */
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 380px;
+  }
+  
+  /* Logo */
+  header .logoHome {
+	font-family: "Fjalla One", sans-serif, Arial, Helvetica;
+	font-size: 80px;
+	color: #f0e9b8; /* Geel voor de fill */
+	-webkit-text-stroke: 1.5px #ca2e2e; /* Rood voor de stroke */
+	paint-order: stroke fill;
+	padding-bottom: 7px;
+	text-decoration: none;
+  }
+  
+  header .logoHome span {
+	font-size: 100px;
+  }
+  
+  header .logoAbout {
+	font-family: "Fjalla One", sans-serif, Arial, Helvetica;
+	font-size: 80px;
+	color: #f0e9b8; /* Geel voor de fill */
+	-webkit-text-stroke: 1.5px #ca2e2e; /* Rood voor de stroke */
+	paint-order: stroke fill;
+	padding-bottom: 7px;
+	text-decoration: none;
+  }
+  
+  header .logoAbout span {
+	font-size: 100px;
+  }
+  
+  /* Container */
+  .container {
+	position: fixed;
+	top: 0;
+	left: 53.7%;
+	transform: translateX(calc(515px - 100%));
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 10px;
+	width: 134px;
+	background-color: #ca2e2e;
+	transition: width 0.3s ease, top 0.3s ease;
+	z-index: 1;
+  }
+  
+  .container.expanded {
+	width: 260px;
+  }
+  
+  /* Cirkels */
+  .circle {
+	width: 62px;
+	height: 62px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+	font-weight: bold;
+	color: #f0e9b8;
+	background-color: #ca2e2e;
+	border: 8px solid #972323;
+	text-transform: uppercase;
+	text-decoration: none;
+	position: relative;
+  }
+  
+  .container.expanded .circle {
+	width: 125px;
+	height: 125px;
+	font-size: 25px;
+  }
+  
+  /* Stijlen voor de actieve pagina's */
+  .circle.home.active,
+  .circle.about.active,
+  .circle.huren.active,
+  .circle.contact.active {
+	background-color: #f0e9b8;
+	color: #972323;
+	border-color: #f0e9b8;
+  }
+  
+  /* Hover effecten */
+  .circle:hover {
+	background-color: #f0e9b8;
+	color: #972323;
+	border-color: #f0e9b8;
+  }
+  
+
+  
+  /* Responsive: Tablet en mobiel */
+
+  
+  @media (max-width: 1024px) {
+	  /* Logo */
+	  header .logoHome {
+		font-size: 60px;
+	  }
+	  
+	  header .logoHome span {
+		font-size: 80px;
+	  }
+
+	.container {
+	  left: 50%;
+	  transform: translateX(-50%);
+	  width: 135px !important;
+	  margin-bottom: 0px !important;
+	}
+  
+	.circle {
+	  width: 125px;
+	  height: 125px;
+	  font-size: 25px;
+	}
+  }
+  
+

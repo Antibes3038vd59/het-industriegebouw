@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+/* ALGEMENE SETTINGS */
+
+body.about-page {
+	width: 100%;
+	margin: auto;
+	background-color: #ca2e2e  !important;
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+.dotAbout {
+	position: absolute;
+	background-color: #cfc261;
+	border-radius: 50%;
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+	z-index: 4;
+}
+/* EINDE ALGEMENE SETTINGS */
+
+/* header */
+header {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	margin-right: 380px;
+}
+
+.logoAbout {
+    font-size: 80px;
+    color: #ca2e2e;
+    -webkit-text-stroke: 1.5px #f0e9b8;
+    padding-bottom: 7px;
+}
+
+header span {
+	font-size: 100px;
+}
+
+/* main */
+.wrapperAbout {
+    max-width: 1120px; /* zelfde als h1 */
+    margin: 0 auto;
+	padding-left: 45px;
+}
+
+.tekstAbout, body.about-page .tekstAbout .titleAbout {
+	font-family: "Fjalla One", sans-serif, Arial, Helvetica, sans-serif;
+    color: #f0e9b8;
+    font-size: 18px;
+    width: 800px;
+    line-height: 1.5;
+}
+
+.titleAbout {
+	font-family: "Fjalla One", sans-serif, Arial, Helvetica, sans-serif;
+    color: #cfc261;
+    line-height: 1.5;
+}
+
+.footerAbout {
+    padding: 50px 890px 0px 105px;
+	margin: auto;
+}
+
+
+								/* Tablet layout: schermbreedte tot 1024px */
+@media (max-width: 1024px) {
+ 
+/* MAIN */
+
+.tekstAbout {
+	width: 90%;
+	font-size: 24px;
+	text-align: left;
+}
+
+.footerAbout {
+    padding: 50px 0px 0px 45px;
+	margin: auto;
+}
+}
