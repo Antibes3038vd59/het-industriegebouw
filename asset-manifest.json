@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/het-industriegebouw/static/css/main.525ead1c.css",
+    "main.js": "/het-industriegebouw/static/js/main.87ca184c.js",
+    "index.html": "/het-industriegebouw/index.html",
+    "main.525ead1c.css.map": "/het-industriegebouw/static/css/main.525ead1c.css.map",
+    "main.87ca184c.js.map": "/het-industriegebouw/static/js/main.87ca184c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.525ead1c.css",
+    "static/js/main.87ca184c.js"
+  ]
+}
