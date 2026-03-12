@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../css/hurenFormulier.css';
 import useCursorAnimation from '../hooks/useCursorAnimation';
 import useMenuAnimation from '../hooks/useMenuAnimation';
@@ -8,46 +8,46 @@ const HurenFormulier = () => {
   useMenuAnimation();
   const [totalCost, setTotalCost] = useState(null);
 
+  // State voor de z-index van afbeeldingen
+  const [zIndices, setZIndices] = useState({
+    foto1: 1,
+    foto2: 2,
+    foto3: 3,
+  });
+
+  // Ref voor de afbeeldingen
+  const foto1Ref = useRef(null);
+  const foto2Ref = useRef(null);
+  const foto3Ref = useRef(null);
+
+  // Functie om de z-index te updaten bij klik
+  const handleImageClick = (imageKey) => {
+    setZIndices((prev) => {
+      const newZIndices = { ...prev };
+      // Verhoog alle z-indices en zet de geklikte afbeelding bovenaan
+      Object.keys(newZIndices).forEach((key) => {
+        newZIndices[key] = newZIndices[key] + 1;
+      });
+      newZIndices[imageKey] = Math.max(...Object.values(newZIndices)) + 1;
+      return newZIndices;
+    });
+  };
+
+  // useEffect voor het instellen van de transform-styles
   useEffect(() => {
-    const storedTotalCost = localStorage.getItem('totalCost');
-    if (storedTotalCost) {
-      setTotalCost(storedTotalCost);
-    }
-
-    document.body.classList.add('hurenFormulier-page');
-
-    // JavaScript-logica voor afbeeldingen
-    const images = document.querySelectorAll('.fotoMain2HurenForm');
-    let zIndexCounter = 4;
-
-    images.forEach(image => {
-      const style = window.getComputedStyle(image);
-      const transform = style.transform;
-      let matrix;
-
-      try {
-        matrix = new DOMMatrix(transform);
-      } catch (e) {
-        const parts = transform.match(/^matrix\((.+)\)$/);
-        if (parts) {
-          const values = parts[1].split(', ');
-          matrix = {
-            e: parseFloat(values[4]),
-            f: parseFloat(values[5])
-          };
-        }
-      }
-
-      if (matrix) {
+    const images = [foto1Ref.current, foto2Ref.current, foto3Ref.current];
+    images.forEach((image) => {
+      if (image) {
+        const style = window.getComputedStyle(image);
+        const transform = style.transform;
+        const matrix = new DOMMatrix(transform);
         image.style.setProperty('--tx', `${matrix.e}px`);
         image.style.setProperty('--ty', `${matrix.f}px`);
         image.style.setProperty('--direction', matrix.e > 0 ? '15px' : '-15px');
       }
-
-      image.addEventListener('click', function() {
-        this.style.zIndex = zIndexCounter++;
-      });
     });
+
+    document.body.classList.add('hurenFormulier-page');
   }, []);
 
   return (
@@ -89,9 +89,30 @@ const HurenFormulier = () => {
           </p>
 
           <div className="fotoContainerHurenForm">
-            <img src="../../images/producten/restaurant.jpg" alt="restaurant" className="fotoMain2HurenForm foto1" />
-            <img src="../../images/producten/kantoor.jpg" alt="kantoor" className="fotoMain2HurenForm foto2" />
-            <img src="../../images/producten/winkel.jpg" alt="winkel" className="fotoMain2HurenForm foto3" />
+            <img
+              ref={foto1Ref}
+              src={`${process.env.PUBLIC_URL}/images/producten/restaurant.jpg`}
+              alt="restaurant"
+              className="fotoMain2HurenForm foto1"
+              style={{ zIndex: zIndices.foto1 }}
+              onClick={() => handleImageClick('foto1')}
+            />
+            <img
+              ref={foto2Ref}
+              src={`${process.env.PUBLIC_URL}/images/producten/kantoor.jpg`}
+              alt="kantoor"
+              className="fotoMain2HurenForm foto2"
+              style={{ zIndex: zIndices.foto2 }}
+              onClick={() => handleImageClick('foto2')}
+            />
+            <img
+              ref={foto3Ref}
+              src={`${process.env.PUBLIC_URL}/images/producten/winkel.jpg`}
+              alt="winkel"
+              className="fotoMain2HurenForm foto3"
+              style={{ zIndex: zIndices.foto3 }}
+              onClick={() => handleImageClick('foto3')}
+            />
           </div>
 
           {/* Aanvraagformulier */}
