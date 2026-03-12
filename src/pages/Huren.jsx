@@ -26,17 +26,21 @@ const Huren = () => {
 
   const handleSizeClick = (row, size) => {
     if (!selectedCategories[row]) return;
-
+  
     setSelectedSizes(prev => ({ ...prev, [row]: size }));
-    localStorage.setItem('totalCost', (size * 50).toString());
-
+  
+    const pricePerM2 = 50;
+    const totalCost = size * pricePerM2;
+    localStorage.setItem('totalCost', totalCost.toString());
+  
     setOutputs(prev => ({
       ...prev,
       [row]: size === 150 ? 'available' : 'unavailable',
     }));
-
+  
     setResetVisibility(prev => ({ ...prev, [row]: 'visible' }));
   };
+  
 
   const handleReset = row => {
     const updatedCategories = { ...selectedCategories };

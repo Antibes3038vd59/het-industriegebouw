@@ -37,7 +37,7 @@ const Contact = () => {
 
       <main className="contact-page">
         <div className="wrapperHurenKlein">
-          <h1 className="tekstHuren">
+          <h1 className="tekstContact">
             Heeft u vragen voor Het Industriegebouw? Neem dan gerust contact met ons op.
           </h1>
 

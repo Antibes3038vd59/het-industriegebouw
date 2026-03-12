@@ -103,6 +103,7 @@ body.hurenFormulier-page {
   
 .aanvraagFormulier label {
   color: #f0e9b8;
+  padding: 0px 0px 0px 0px;
 }
   
 .aanvraagFormulier input {
@@ -159,22 +160,31 @@ body.hurenFormulier-page {
     /* inputvelden formulier */
   .aanvraagFormulier {
     position: absolute;
-    top: 1575px;
+    top: 1400px;
     margin: auto;
     padding: 0px 0px 100px 45px;
   }
     
   .aanvraagFormulier label {
-    color: #f0e9b8;
-  }
-    
-  .aanvraagFormulier input {
-    position: relative;
-    float: right;
-    margin-left: 50px;
+    padding: 0px 0px 0px 300px;
   }
 
   .footerHurenForm {
     padding: 425px 0px 0px 45px;
   }
 }
+
+								/* Mobiel layout: schermbreedte tot 768px */
+  @media (max-width: 1024px) {
+    .aanvraagFormulier {
+      position: absolute;
+      top: 1500px;
+      margin: auto;
+      padding: 0px 0px 100px 145px;
+    }
+      
+    .aanvraagFormulier label {
+      padding: 0px 0px 0px 50px;
+    }
+
+  }

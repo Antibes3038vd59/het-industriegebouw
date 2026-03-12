@@ -33,8 +33,13 @@ const HurenFormulier = () => {
     });
   };
 
-  // useEffect voor het instellen van de transform-styles
+  // Haal het totaalbedrag op uit localStorage
   useEffect(() => {
+    const savedTotalCost = localStorage.getItem('totalCost');
+    if (savedTotalCost) {
+      setTotalCost(parseFloat(savedTotalCost));
+    }
+
     const images = [foto1Ref.current, foto2Ref.current, foto3Ref.current];
     images.forEach((image) => {
       if (image) {
@@ -65,21 +70,21 @@ const HurenFormulier = () => {
 
           {totalCost && (
             <div id="totalCostContainer" className="totalCost">
-              <p>Uw totaalbedrag voor de kale huur bedraagt: €{totalCost},- per maand.</p>
+              <p>Uw totaalbedrag voor de kale huur bedraagt: <br /> €{totalCost.toFixed(2)},-  per maand.</p>
             </div>
           )}
 
           <p className="tekstHurenForm">
             Het Industriegebouw staat bekend om zijn unieke karakter en dynamische gemeenschap van huurders. <br />
-            Om ervoor te zorgen dat we een duurzame en passende relatie kunnen opbouwen, vragen wij u vriendelijk <br />
+            Om ervoor te zorgen dat we een duurzame en passende relatie kunnen opbouwen, vragen wij u vriendelijk
             om het aanvraagformulier in te vullen met uw contactgegevens. <br /><br />
 
-            Na ontvangst van uw formulier nemen wij zo spoedig mogelijk contact met u op voor een <br />
-            persoonlijk gesprek. Dit gesprek helpt ons om beter te begrijpen wat u zoekt in een huurruimte <br />
+            Na ontvangst van uw formulier nemen wij zo spoedig mogelijk contact met u op voor een
+            persoonlijk gesprek. Dit gesprek helpt ons om beter te begrijpen wat u zoekt in een huurruimte
             en of onze visie en waarden bij elkaar passen. <br /><br />
 
-            Wij streven ernaar om een gemeenschap te creëren waar iedere huurder zich thuis voelt en <br />
-            waar samenwerking en inspiratie centraal staan. Daarom nemen wij ons de tijd om elke potentiële <br />
+            Wij streven ernaar om een gemeenschap te creëren waar iedere huurder zich thuis voelt en
+            waar samenwerking en inspiratie centraal staan. Daarom nemen wij ons de tijd om elke potentiële
             huurder persoonlijk te leren kennen. <br /><br />
 
             Dank u voor uw interesse en we hopen u snel te mogen ontmoeten! <br /><br />
