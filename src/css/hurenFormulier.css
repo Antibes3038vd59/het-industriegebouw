@@ -175,7 +175,7 @@ body.hurenFormulier-page {
 }
 
 								/* Mobiel layout: schermbreedte tot 768px */
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     .aanvraagFormulier {
       position: absolute;
       top: 1500px;
@@ -188,3 +188,18 @@ body.hurenFormulier-page {
     }
 
   }
+
+  								/* Mobiel layout: schermbreedte tot 392px */
+@media (max-width: 392px) {
+.aanvraagFormulier {
+  position: absolute;
+  top: 1920px;
+  margin: auto;
+  padding: 0px 0px 100px 10px;
+}
+                      
+.aanvraagFormulier label {
+  padding: 0px 0px 0px 20px;
+}
+                
+}
