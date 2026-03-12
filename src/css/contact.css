@@ -97,7 +97,7 @@ body, html {
 	}
 	.contactFormulier {
 		width: 250px;
-		margin: auto;
+		margin-left: 60px;
 	}
 
 	.contactFormulier input, textarea {

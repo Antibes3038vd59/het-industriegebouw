@@ -95,21 +95,26 @@ body.hurenFormulier-page {
   
   /* inputvelden formulier */
 .aanvraagFormulier {
-  position: absolute;
-  top: 1300px;
-  margin-left: 320px;
-  padding-bottom: 100px;
+  position: relative;
+  top: 500px;
+  margin-left: 170px;
+  padding: 0px 0px 100px 0px;
+  z-index: 1;
+  max-width: 425px;
 }
   
 .aanvraagFormulier label {
   color: #f0e9b8;
   padding: 0px 0px 0px 0px;
+  float: left;
+  z-index: 1;
 }
   
 .aanvraagFormulier input {
   position: relative;
   float: right;
-  margin-left: 50px;
+  margin-right: 140px;
+  z-index: 1;
 }
   
 .footerHurenForm {
@@ -142,7 +147,7 @@ body.hurenFormulier-page {
   }
   /* images */
   .fotoContainerHurenForm {
-    padding-right: 0px;
+    padding-right: 46px;
     padding-left: 0px;
   }
     
@@ -157,49 +162,19 @@ body.hurenFormulier-page {
     position: absolute;
   }
 
-    /* inputvelden formulier */
-  .aanvraagFormulier {
-    position: absolute;
-    top: 1400px;
-    margin: auto;
-    padding: 0px 0px 100px 45px;
-  }
-    
-  .aanvraagFormulier label {
-    padding: 0px 0px 0px 300px;
-  }
-
   .footerHurenForm {
     padding: 425px 0px 0px 45px;
   }
+
+  								/* Tablet layout: schermbreedte tot 584px */
+@media (max-width: 584px) {
 }
-
-								/* Mobiel layout: schermbreedte tot 768px */
-  @media (max-width: 768px) {
-    .aanvraagFormulier {
-      position: absolute;
-      top: 1500px;
-      margin: auto;
-      padding: 0px 0px 100px 145px;
-    }
-      
-    .aanvraagFormulier label {
-      padding: 0px 0px 0px 50px;
-    }
-
-  }
-
-  								/* Mobiel layout: schermbreedte tot 392px */
-@media (max-width: 392px) {
 .aanvraagFormulier {
-  position: absolute;
-  top: 1920px;
-  margin: auto;
-  padding: 0px 0px 100px 10px;
+  max-width: 425px;
+  margin-left: 155px;
 }
-                      
-.aanvraagFormulier label {
-  padding: 0px 0px 0px 20px;
+
+.aanvraagFormulier input {
+  margin-right: 82px;
 }
-                
 }

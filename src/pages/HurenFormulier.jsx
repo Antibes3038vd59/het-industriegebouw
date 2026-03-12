@@ -118,27 +118,27 @@ const HurenFormulier = () => {
               style={{ zIndex: zIndices.foto3 }}
               onClick={() => handleImageClick('foto3')}
             />
+
+            {/* Aanvraagformulier */}
+            <form action="verwerk_formulier.php" method="post" className="aanvraagFormulier">
+              <label htmlFor="naam">Naam:</label>
+              <input type="text" id="naam" name="naam" required /><br /><br />
+
+              <label htmlFor="onderneming">Naam onderneming:</label>
+              <input type="text" id="onderneming" name="onderneming" required /><br /><br />
+
+              <label htmlFor="adres">Adres:</label>
+              <input type="text" id="adres" name="adres" required /><br /><br />
+
+              <label htmlFor="telefoon">Telefoon:</label>
+              <input type="tel" id="telefoon" name="telefoon" required /><br /><br />
+
+              <label htmlFor="email">E-mailadres:</label>
+              <input type="email" id="email" name="email" required /><br /><br />
+
+              <input type="submit" value="Verzenden" />
+            </form>
           </div>
-
-          {/* Aanvraagformulier */}
-          <form action="verwerk_formulier.php" method="post" className="aanvraagFormulier">
-            <label htmlFor="naam">Naam:</label>
-            <input type="text" id="naam" name="naam" required /><br /><br />
-
-            <label htmlFor="onderneming">Naam onderneming:</label>
-            <input type="text" id="onderneming" name="onderneming" required /><br /><br />
-
-            <label htmlFor="adres">Adres:</label>
-            <input type="text" id="adres" name="adres" required /><br /><br />
-
-            <label htmlFor="telefoon">Telefoon:</label>
-            <input type="tel" id="telefoon" name="telefoon" required /><br /><br />
-
-            <label htmlFor="email">E-mailadres:</label>
-            <input type="email" id="email" name="email" required /><br /><br />
-
-            <input type="submit" value="Verzenden" />
-          </form>
         </div>
       </main>
 
