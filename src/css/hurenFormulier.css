@@ -162,6 +162,15 @@ body.hurenFormulier-page {
     position: absolute;
   }
 
+  .aanvraagFormulier {
+    max-width: 425px;
+    margin-left: 200px;
+  }
+
+  .aanvraagFormulier input {
+    margin-right: 82px;
+  }
+
   .footerHurenForm {
     padding: 425px 0px 0px 45px;
   }

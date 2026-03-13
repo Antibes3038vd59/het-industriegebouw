@@ -149,7 +149,7 @@ const VicoNieuws = () => {
 
       {/* Footer */}
       <footer className="footerNieuws">
-        <p>© 2025 Het Industriegebouw</p>
+        <p>© 2026 Het Industriegebouw</p>
       </footer>
     </>
   );

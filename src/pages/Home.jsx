@@ -122,7 +122,7 @@ const Home = () => {
 
       {/* Footer */}
       <footer className="footerHome">
-        <p>© 2025 Het Industriegebouw</p>
+        <p>© 2026 Het Industriegebouw</p>
       </footer>
     </>
   );
