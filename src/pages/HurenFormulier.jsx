@@ -98,7 +98,7 @@ const HurenFormulier = () => {
               ref={foto1Ref}
               src={`${process.env.PUBLIC_URL}/images/producten/restaurant.jpg`}
               alt="restaurant"
-              className="fotoMain2HurenForm foto1"
+              className="fotoMain2HurenForm foto3"
               style={{ zIndex: zIndices.foto1 }}
               onClick={() => handleImageClick('foto1')}
             />
@@ -114,7 +114,7 @@ const HurenFormulier = () => {
               ref={foto3Ref}
               src={`${process.env.PUBLIC_URL}/images/producten/winkel.jpg`}
               alt="winkel"
-              className="fotoMain2HurenForm foto3"
+              className="fotoMain2HurenForm foto1"
               style={{ zIndex: zIndices.foto3 }}
               onClick={() => handleImageClick('foto3')}
             />

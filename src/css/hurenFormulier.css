@@ -165,16 +165,27 @@ body.hurenFormulier-page {
   .footerHurenForm {
     padding: 425px 0px 0px 45px;
   }
-
-  								/* Tablet layout: schermbreedte tot 584px */
-@media (max-width: 584px) {
-}
-.aanvraagFormulier {
-  max-width: 425px;
-  margin-left: 155px;
 }
 
-.aanvraagFormulier input {
-  margin-right: 82px;
-}
+  								/* Mobiel layout: schermbreedte tot 584px */
+  @media (max-width: 584px) {
+
+    #totalCostContainer p {
+      width: 50%;
+    }
+
+    .fotoMain2HurenForm {
+      width: 325px;
+      height: 175px;
+      margin-left: 162px;
+    }
+  
+    .aanvraagFormulier {
+      max-width: 425px;
+      margin-left: 155px;
+    }
+
+    .aanvraagFormulier input {
+      margin-right: 82px;
+    }
 }

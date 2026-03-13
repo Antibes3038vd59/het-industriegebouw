@@ -94,9 +94,22 @@ body main p {
 
 								/* Tablet layout: schermbreedte tot 1024px */
 @media (max-width: 1024px) {
-
-
-.fotoContainer {
-    padding-right: 45px;
+    .fotoContainer {
+            padding-right: 46px;
+            padding-left: 0px;
+    }
 }
+
+						        /* Mobiel layout: schermbreedte tot 584px */
+@media (max-width: 584px) {
+    .fotoContainer {
+        width: 325px;
+        height: 175px;
+    }
+
+    .fotoMain2 {
+        width: 325px;
+        height: 175px;
+        margin-left: 150px;
+    }
 }

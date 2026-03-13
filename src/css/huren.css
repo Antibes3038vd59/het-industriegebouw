@@ -29,25 +29,6 @@ body, html {
 }
 /* EINDE ALGEMENE SETTINGS */
 
-/* header */
-header {
-	display: flex;
-	justify-content: center;
-    align-items: center;
-	margin-right: 380px;
-}
-
-.logoHuren {
-    font-size: 80px;
-    color: #ca2e2e;
-    -webkit-text-stroke: 1.5px #f0e9b8;
-    padding-bottom: 7px;
-}
-
-header span {
-	font-size: 100px;
-}
-
 /* main */
 .wrapperHurenKlein {
     max-width: 1120px; /* zelfde als h1 */

@@ -102,20 +102,13 @@ header {
 
   
   @media (max-width: 1024px) {
-	  /* Logo */
-	  header .logoHome {
-		font-size: 60px;
-	  }
-	  
-	  header .logoHome span {
-		font-size: 80px;
-	  }
 
 	.container {
-	  left: 50%;
-	  transform: translateX(-50%);
-	  width: 135px !important;
-	  margin-bottom: 0px !important;
+		position: static;
+		transform: none;
+		margin: auto;
+		grid-template-columns: repeat(2, 1fr);
+		width: 134px;
 	}
   
 	.circle {

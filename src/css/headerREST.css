@@ -55,7 +55,7 @@ header .logoRest span {
 	paint-order: stroke fill;
 }
 
-/* Logo stijlen voor About pagina */
+					/* Logo stijlen voor About pagina */
 header.about .logoAbout {
 	font-family: "Fjalla One", sans-serif, Arial, Helvetica;
 	font-size: 80px;
@@ -143,14 +143,6 @@ body.contact .circleRest.contact.active {
 
 								/* Tablet layout: schermbreedte tot 1024px */
 @media (max-width: 1024px) {
-	/* Logo */
-	header .logoRest {
-		font-size: 60px;
-	  }
-	  
-	  header .logoRest span {
-		font-size: 80px;
-	  }
 
 /* NAVIGATIE */
 .containerRest {
