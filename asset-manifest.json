@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/het-industriegebouw/static/css/main.4b1f3ecb.css",
+    "main.css": "/het-industriegebouw/static/css/main.477c7400.css",
     "main.js": "/het-industriegebouw/static/js/main.45ef8dad.js",
     "index.html": "/het-industriegebouw/index.html",
-    "main.4b1f3ecb.css.map": "/het-industriegebouw/static/css/main.4b1f3ecb.css.map",
+    "main.477c7400.css.map": "/het-industriegebouw/static/css/main.477c7400.css.map",
     "main.45ef8dad.js.map": "/het-industriegebouw/static/js/main.45ef8dad.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b1f3ecb.css",
+    "static/css/main.477c7400.css",
     "static/js/main.45ef8dad.js"
   ]
 }
