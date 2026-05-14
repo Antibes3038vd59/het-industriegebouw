@@ -70,7 +70,7 @@ const HurenFormulier = () => {
 
           {totalCost && (
             <div id="totalCostContainer" className="totalCost">
-              <p>Uw totaalbedrag voor de kale huur bedraagt: <br /> €{totalCost.toFixed(2)},-  per maand.</p>
+              <p>Uw totaalbedrag voor de kale huur bedraagt: <br /> €{totalCost},-  per maand.</p>
             </div>
           )}
 

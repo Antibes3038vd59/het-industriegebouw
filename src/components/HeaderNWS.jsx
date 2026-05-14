@@ -27,7 +27,7 @@ const HeaderNWS = () => {
   return (
     <header className={isHome ? 'home' : 'not-home'}>
       <Link to="/" className={isHome ? 'logoHome' : 'logoAbout'} onClick={scrollToTop}>
-        <span>H</span>et <span>I</span>ndustriegebouw
+        <span>H</span>et <span>I</span>ndustriegebow
       </Link>
       <div className={`container ${isExpanded ? 'expanded' : ''}`}>
         <Link to="/" className={`circle home ${location.pathname.startsWith('/nieuws/') ? 'active' : ''}`} onClick={scrollToTop}>
