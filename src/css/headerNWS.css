@@ -98,7 +98,7 @@ header {
   
 
   
-  /* Responsive: Tablet en mobiel */
+  /* Responsive: Tablet */
 
   
   @media (max-width: 1024px) {
@@ -118,4 +118,87 @@ header {
 	}
   }
   
+  
 
+/* MOBIEL LANDSCAPE */
+@media (max-width: 900px) and (orientation: landscape) and (max-height: 500px) {
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 16px;
+    }
+
+    header .logoHome,
+    header .logoAbout {
+        font-size: 36px;
+    }
+
+    header .logoHome span,
+    header .logoAbout span {
+        font-size: 45px;
+    }
+
+    .container {
+        position: static;
+        transform: none;
+        margin: 0;
+        width: 116px;
+        gap: 8px;
+    }
+
+    .circle {
+        width: 54px;
+        height: 54px;
+        font-size: 10px;
+        border-width: 6px;
+    }
+
+    .container.expanded .circle {
+        width: 108px;
+        height: 108px;
+        font-size: 20px;
+    }
+}
+
+
+/* MOBIEL PORTRET: tot 600px */
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        padding: 0 16px;
+    }
+
+    header .logoHome,
+    header .logoAbout {
+        font-size: 42px;
+    }
+
+    header .logoHome span,
+    header .logoAbout span {
+        font-size: 52px;
+    }
+
+    .container {
+        position: static;
+        transform: none;
+        margin: 8px 0 20px 0;
+        gap: 8px;
+        width: 116px;
+    }
+
+    .circle {
+        width: 54px;
+        height: 54px;
+        font-size: 10px;
+        border-width: 6px;
+    }
+
+    .container.expanded .circle {
+        width: 108px;
+        height: 108px;
+        font-size: 20px;
+    }
+}

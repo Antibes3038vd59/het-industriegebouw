@@ -3,16 +3,16 @@
 /* ALGEMENE SETTINGS */
 
 h1, h2, a, footer {
-	font-family: "Fjalla One", sans-serif, Arial, Helvetica, sans-serif;
-	color: black;
-	text-decoration: none;
-	font-weight: normal;
+    font-family: "Fjalla One", sans-serif, Arial, Helvetica, sans-serif;
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
 }
 
 body.home-page {
-	width: 100%;
-	margin: auto;
-	background-color: #f0e9b8 !important;
+    width: 100%;
+    margin: auto;
+    background-color: #f0e9b8 !important;
 }
 
 body, html {
@@ -20,64 +20,73 @@ body, html {
 }
 
 .dotHome {
-	position: absolute;
-	background-color: #972323;
-	border-radius: 50%;
-	pointer-events: none;
-	transform: translate(-50%, -50%);
-	z-index: 3;
+    position: absolute;
+    background-color: #972323;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 3;
 }
 
 /* EINDE ALGEMENE SETTINGS */
 
-/* header */
+
+/* HEADER — desktop */
+
 header {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-right: 380px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 45px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
-/* Logo stijlen voor REST pagina's */
+/* Logo — REST pagina's */
 header .logoRest {
-	font-family: "Fjalla One", sans-serif, Arial, Helvetica;
-	font-size: 80px;
-	color: #ca2e2e;
-	-webkit-text-stroke: 1.5px #f0e9b8;
-	paint-order: stroke fill;
-	padding-bottom: 7px;
-	text-decoration: none;
+    font-family: "Fjalla One", sans-serif, Arial, Helvetica;
+    font-size: 80px;
+    color: #ca2e2e;
+    -webkit-text-stroke: 1.5px #f0e9b8;
+    paint-order: stroke fill;
+    padding-bottom: 7px;
+    text-decoration: none;
+    line-height: 1;
 }
 
 header .logoRest span {
-	font-size: 100px;
-	-webkit-text-stroke: 1.5px #f0e9b8;
-	paint-order: stroke fill;
+    font-size: 100px;
+    -webkit-text-stroke: 1.5px #f0e9b8;
+    paint-order: stroke fill;
 }
 
-					/* Logo stijlen voor About pagina */
+/* Logo — About pagina */
 header.about .logoAbout {
-	font-family: "Fjalla One", sans-serif, Arial, Helvetica;
-	font-size: 80px;
-	color: #ca2e2e;
-	-webkit-text-stroke: 1.5px #f0e9b8;
-	paint-order: stroke fill;
-	padding-bottom: 7px;
-	text-decoration: none;
+    font-family: "Fjalla One", sans-serif, Arial, Helvetica;
+    font-size: 80px;
+    color: #ca2e2e;
+    -webkit-text-stroke: 1.5px #f0e9b8;
+    paint-order: stroke fill;
+    padding-bottom: 7px;
+    text-decoration: none;
+    line-height: 1;
 }
 
 header.about .logoAbout span {
-	font-size: 100px;
-	-webkit-text-stroke: 1.5px #f0e9b8;
-	paint-order: stroke fill;
+    font-size: 100px;
+    -webkit-text-stroke: 1.5px #f0e9b8;
+    paint-order: stroke fill;
 }
 
-/* navigatie */
+
+/* NAVIGATIE — desktop */
+
 .containerRest {
     position: fixed;
-    top: 0px;
-    left: 53.7%;
-    transform: translateX(calc(515px - 100%)); /* 1030 / 2 = 515 */
+    top: 0;
+    right: max(calc((100vw - 1120px) / 2 + 45px), 45px);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -85,14 +94,7 @@ header.about .logoAbout span {
     width: 134px;
     background-color: #f0e9b8;
     font-family: "Fjalla One", sans-serif, Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    transition: width 0s, top 0s;
-    z-index: 1;
-}
-
-.containerRest.expanded {
-    width: 260px;
+    z-index: 2;
 }
 
 /* Cirkels */
@@ -109,13 +111,15 @@ header.about .logoAbout span {
     border: 8px solid #cfc261;
     color: #ca2e2e;
     text-transform: uppercase;
-    transition: width 0s, height 0s;
     text-decoration: none;
     box-sizing: border-box;
-    position: relative;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 
-/* Stijlen voor de actieve pagina's */
+/* Actieve pagina */
+.circleRest.about.active,
+.circleRest.huren.active,
+.circleRest.contact.active,
 body.about .circleRest.about.active,
 body.huren .circleRest.huren.active,
 body.contact .circleRest.contact.active {
@@ -124,40 +128,79 @@ body.contact .circleRest.contact.active {
     border: 8px solid #ca2e2e;
 }
 
-/* Hover effecten */
+/* Hover */
 .circleRest:hover {
     background-color: #ca2e2e;
     color: #f0e9b8;
     border: 8px solid #ca2e2e;
 }
 
-/* Stijlen voor de actieve pagina's */
-.circleRest.about.active,
-.circleRest.huren.active,
-.circleRest.contact.active {
-    background-color: #ca2e2e;
-    color: #f0e9b8;
-    border: 8px solid #ca2e2e;
-}
 
+/* TABLET: 601px tot 1024px */
 
-								/* Tablet layout: schermbreedte tot 1024px */
 @media (max-width: 1024px) {
 
-/* NAVIGATIE */
-.containerRest {
-	position: static;
-	transform: none;
-	margin: 10px 0px 30px 0px;
-	grid-template-columns: repeat(2, 1fr);
-	width: 130px;
+    header {
+        flex-direction: column;
+        padding: 0 30px;
+    }
+
+    header .logoRest,
+    header.about .logoAbout {
+        font-size: 60px;
+    }
+
+    header .logoRest span,
+    header.about .logoAbout span {
+        font-size: 75px;
+    }
+
+    .containerRest {
+        position: static;
+        transform: none;
+        margin: 10px 0 30px 0;
+        grid-template-columns: repeat(2, 1fr);
+        width: 130px;
+    }
+
+    .circleRest {
+        width: 60px;
+        height: 60px;
+        font-size: 12px;
+    }
 }
 
-.circleRest {
-	width: 60px;
-	height: 60px;
-	font-size: 12px;
-}
-}
 
+/* MOBIEL: tot en met 600px */
 
+@media (max-width: 600px) {
+
+    header {
+        padding: 0 16px;
+    }
+
+    header .logoRest,
+    header.about .logoAbout {
+        font-size: 42px;
+    }
+
+    header .logoRest span,
+    header.about .logoAbout span {
+        font-size: 52px;
+    }
+
+    .containerRest {
+        position: static;
+        transform: none;
+        margin: 8px 0 20px 0;
+        gap: 8px;
+        width: 116px;
+    }
+
+    .circleRest {
+        width: 54px;
+        height: 54px;
+        font-size: 10px;
+        border-width: 6px;
+    }
+}
