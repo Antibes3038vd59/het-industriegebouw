@@ -127,17 +127,17 @@ header {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 0 16px;
+        padding: 0 30px;
     }
 
     header .logoHome,
     header .logoAbout {
-        font-size: 36px;
+        font-size: 60px;
     }
 
     header .logoHome span,
     header .logoAbout span {
-        font-size: 45px;
+        font-size: 75px;
     }
 
     .container {
