@@ -134,6 +134,7 @@ body.hurenFormulier-page {
 	/* MAIN */
   .tekstHurenForm  {
     width: 90%;
+    font-size: 20px;
   }
   #totalCostContainer {
     padding-left: 18px;
@@ -188,6 +189,10 @@ body.hurenFormulier-page {
       width: 325px;
       height: 175px;
       margin-left: 162px;
+    }
+
+    .tekstHurenForm  {
+      font-size: 25px;
     }
     
   /* formulier */

@@ -98,6 +98,10 @@ body main p {
             padding-right: 46px;
             padding-left: 0px;
     }
+
+    body main p {
+        font-size: 20px;
+    }
 }
 
 						        /* Mobiel layout: schermbreedte tot 584px */
@@ -111,5 +115,9 @@ body main p {
         width: 325px;
         height: 175px;
         margin-left: 150px;
+    }
+
+    body main p {
+        font-size: 25px;
     }
 }
