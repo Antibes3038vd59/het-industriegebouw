@@ -39,6 +39,10 @@ body, html {
     line-height: 1.5;
 }
 
+.tekstAbout {
+	line-height: 32px;
+}
+
 .titleAbout {
 	font-family: "Fjalla One", sans-serif, Arial, Helvetica, sans-serif;
     color: #cfc261;
@@ -65,5 +69,13 @@ body, html {
 .footerAbout {
     padding: 50px 0px 0px 45px;
 	margin: auto;
+}
+}
+
+						        /* Mobiel layout: schermbreedte tot 584px */
+@media (max-width: 584px) { 
+ 	.tekstAbout {
+		font-size: 20px;
+	line-height: 35px;
 }
 }

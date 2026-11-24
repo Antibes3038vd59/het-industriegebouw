@@ -79,6 +79,7 @@ body main p {
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: 100;
 	font-size: 16px;
+    line-height: 22px;
     width: 100%; /* laat breedte afhangen van wrapper */
     max-width: 750px; /* optioneel, om tekstblokken wat smaller te houden */
 }
@@ -101,6 +102,7 @@ body main p {
 
     body main p {
         font-size: 20px;
+        line-height: 30px;
     }
 }
 
@@ -119,5 +121,6 @@ body main p {
 
     body main p {
         font-size: 25px;
+        line-height: 35px;
     }
 }
